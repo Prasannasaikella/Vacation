@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -9,6 +10,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Vacation.BusinessLogic;
+using Vacation.BusinessLogic.User;
 
 namespace Vacation
 {
@@ -30,9 +33,31 @@ namespace Vacation
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
+            services.AddTransient<IPackage, Package>();
+            services.AddTransient<IUserService, UserService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/auth/login";
+                    options.AccessDeniedPath = "/auth/accessdenied";
+                })
+                .AddFacebook(options =>
+                {
+                    options.AppId = "2320868944839109";
+                    options.AppSecret = "062703845935337099d095a33d0f3212";
+
+                    options.SignInScheme = "TempCookie";
+                })
+                .AddTwitter(options =>
+                {
+                    options.ConsumerKey = "### INSERT TWITTER COMSUMER KEY HERE ###";
+                    options.ConsumerSecret = "### INSERT TWITTER COMSUMER SECRET HERE ###";
+
+                    options.SignInScheme = "TempCookie";
+                })
+                .AddCookie("TempCookie");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +77,7 @@ namespace Vacation
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseAuthentication();//exception wont be thrown but user wont be logged in  if this is not present
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

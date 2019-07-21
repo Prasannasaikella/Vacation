@@ -4,12 +4,19 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Vacation.BusinessLogic;
 using Vacation.Models;
 
 namespace Vacation.Controllers
 {
     public class HomeController : Controller
     {
+        private IPackage _package;
+        public HomeController(IPackage package)
+        {
+            _package = package;
+        }
+
         public IActionResult Index()
         {
             return View();

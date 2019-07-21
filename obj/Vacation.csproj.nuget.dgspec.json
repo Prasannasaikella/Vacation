@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\2019\\July\\Vacation\\Vacation\\Vacation\\Vacation.csproj": {}
+    "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj": {}
   },
   "projects": {
-    "F:\\2019\\July\\Vacation\\Vacation\\Vacation\\Vacation.csproj": {
+    "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\2019\\July\\Vacation\\Vacation\\Vacation\\Vacation.csproj",
+        "projectUniqueName": "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj",
         "projectName": "Vacation",
-        "projectPath": "F:\\2019\\July\\Vacation\\Vacation\\Vacation\\Vacation.csproj",
+        "projectPath": "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj",
         "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "F:\\2019\\July\\Vacation\\Vacation\\Vacation\\obj\\",
+        "outputPath": "F:\\2019\\July\\GIT\\Vacation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
