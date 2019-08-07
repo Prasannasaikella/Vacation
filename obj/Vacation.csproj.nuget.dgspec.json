@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Project\\Vacation\\Vacation.csproj": {}
+    "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj": {}
   },
   "projects": {
-    "C:\\Project\\Vacation\\Vacation.csproj": {
+    "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Project\\Vacation\\Vacation.csproj",
+        "projectUniqueName": "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj",
         "projectName": "Vacation",
-        "projectPath": "C:\\Project\\Vacation\\Vacation.csproj",
-        "packagesPath": "C:\\Users\\vind\\.nuget\\packages\\",
-        "outputPath": "C:\\Project\\Vacation\\obj\\",
+        "projectPath": "F:\\2019\\July\\GIT\\Vacation\\Vacation.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "F:\\2019\\July\\GIT\\Vacation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\vind\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
